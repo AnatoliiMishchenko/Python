@@ -15,12 +15,12 @@ my_list = []
 for i in range(-N, N+1):
     my_list.append(i)
 print(my_list)
-if(one > len(my_list) and two > len(my_list)):
+if((one > len(my_list) and two > len(my_list)) or (one <= 0 and two <= 0)):
     print('Таких позчий нет в списке')
-elif(one > len(my_list) or two > len(my_list)):
-    if( one > len(my_list)):
+elif(one > len(my_list) or two > len(my_list) or one <= 0 or two <= 0) :
+    if( one > len(my_list) or one <= 0 ):
         print('Позиции под номером 1 нет в списке')
-    elif(two > len(my_list)):
+    elif(two > len(my_list) or two <= 0):
         print('Позиции под номером 2 нет в списке')
-else:
+elif(one <= len(my_list) and two <= len(my_list)):
     print('Произведение позиций', {one}, 'и', {two}, ' = ', int(my_list[one-1]) * int(my_list[two-1]))

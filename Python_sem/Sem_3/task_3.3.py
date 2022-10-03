@@ -3,13 +3,9 @@
 # # полученное от пользователя.
 from random import sample
 
-def find_num(count, number):
-    count = count if count > 0 else -count
+def find_num(count, namber=0):
     arr = sample(range(1,count*2), count)
     print(arr)
-    if(number in arr):
-        return True
-    return False
 
 
-print(find_num(10,5))
+find_num(10)

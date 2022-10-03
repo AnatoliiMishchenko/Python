@@ -12,8 +12,8 @@ summ_number = 0
 n = len(number_my)
 count = int(float(number_my)*10**n)
 
-while (count > 0):
+while count:
     summ_number += int(count % 10)
-    count = count//10
+    count = count/10
 print(summ_number)
 # Хотел сделать проверку про введенную строку через Try  но не сработало(((

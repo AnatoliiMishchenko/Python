@@ -15,6 +15,7 @@ my_list = []
 for i in range(-N, N+1):
     my_list.append(i)
 print(my_list)
+
 if((one > len(my_list) and two > len(my_list)) or (one <= 0 and two <= 0)):
     print('Таких позчий нет в списке')
 elif(one > len(my_list) or two > len(my_list) or one <= 0 or two <= 0) :

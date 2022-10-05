@@ -19,23 +19,27 @@ import random
 
 
 def random_list(count: int):
-    arr = [random.randint(0, count*2) for arr in range(count)]
+    if (count < 0):
+        print("Вы ввели отрицательное значения элементов")
+
+    arr = [random.randint(0, count*3) for arr in range(count)]
     return arr
 
 
 def product_of_pairs_of_numbers(list):
-    long_new_list = int(len(list)/2)
+    long_new_list = int(len(list)//2)
     new_my_list = []
+
     for j in range(long_new_list):
         new_my_list.append((list[j]*list[len(list) - j-1]))
-    if (len(list) % 2 == 0):
-        new_my_list
-    else:
-        new_my_list.append((list[int(len(list)/2) ]))
+
+    if len(list) % 2:
+        new_my_list.append((list[(len(list)//2)]))
+
     return new_my_list
 
 
-my_list = random_list(int(input()))
+my_list = random_list(int(input(" Введите количество элементов ")))
 print(my_list)
 
 print(product_of_pairs_of_numbers(my_list))

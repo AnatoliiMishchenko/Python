@@ -13,6 +13,21 @@
 def decimal_to_binary_conversion(number):
     if number >= 2:
         decimal_to_binary_conversion(number//2)
-    print(number%2, end= " ")
+    print(number % 2, end="")
+
 
 decimal_to_binary_conversion(int(input()))
+
+
+def convert_binary(number):
+    list_number = []
+
+    while number > 0:
+        list_number.insert(0, number % 2)
+        number//=2
+
+    print(*list_number, sep="")
+
+print()
+
+convert_binary(int(input()))

@@ -17,20 +17,24 @@
 import random
 
 
-def random_list(count: int):
-    arr = [random.randint(0, count*2) for arr in range(count)]
+def random_list(count):
+    if(count <0):
+        print("Вы ввели отрицательное значения элементов")
+
+    arr = [random.randint(0, count**2) for arr in range(count)]
     return arr
 
 
-def summ_elements_not_even(list: list):
-    sum = 0
+def summ_elements_not_even(list):
+    sum_= 0
     for i in range(0,len(list),2):
        # if (i % 2 == 0):
             sum += list[i]
     return sum
 
 
-my_list = random_list(int(input()))
+my_list = random_list(int(input("Введите число элементов массива ")))
+
 print(my_list)
 
 print("сумма нечетных элементов = " + str(summ_elements_not_even(my_list)))
